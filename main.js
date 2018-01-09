@@ -77,29 +77,6 @@ var texts = {
             jgrowl2: 'Retiro de fondos hoy',
             scroll_comment: '¡Ooohh! ¡Acabo de retirar mis 156$ desde el sitio web! ¡Es realmente fácil!'
         }
-        /*,
-	ru: {
-        t1: 'АКЦИЯ!',
-        t2: 'Компания <strong>«Binatex»</strong> расширяет географию, теперь она доступна и в вашей стране ',
-        t3: 'В честь этого проходит акция: 50ти первым счастливчикам, зарегистрировавшимся на официальном сайте, компания “Binatex” дарит бонус в размере <strong style="color:red">$1000 абсолютно бесплатно!</strong>',
-        t4: 'Котировки акций',
-        t5: 'Как получить бесплатный бонус в $ 1000?',
-        t6: '<strong>Шаг 1:</strong> Нажмите кнопку «Участвовать в акции»/«Получить 1000$» ниже и вы перейдете на официальный сайт Binatex.',
-        t7: '<strong>Шаг 2: </strong>Нажмите на кнопку «Start earning» на сайте Binatex',
-        t8: '<strong>Шаг 3:</strong> Введите корректный e-mail и получите $1000 бесплатно!',
-        t9: '<a href="http://runlikea.pro/?target=-6AAIgNwJ3IAAAAAAAAAAAAAT2wWlwAAAA" >Официальный сайт</a>',
-        t10: 'Осталось бесплатных бонусов: <span class="js-teaser-count ">23</span>',
-        t11: 'Комментарии',
-        t12: 'Замечательно! Я только что заработала 1179 долларов с 15 долларов США !!! <br><img src="distr/images/11.jpg" class="screenshot" >',
-        t13: 'Я услышал о Бинатекс от моего друга на прошлой неделе! Теперь он зарабатывает больше 1500 долларов в день!',
-        t14: 'Даже мой дядя, которому 64 года, понимает систему! Простой заработок!',
-        t15: 'Сначала я подумала, что это шутка, но на самом деле я получил бесплатные 1000$! <br><img src="distr/images/44.jpg" class="screenshot" ">',
-        t16: 'Да, это здорово! Я никогда ничего не выигрывал, но сегодня мне так повезло !! спасибо Бинатекс!',
-        t17: 'Еще один счастливчик!',
-        t18: 'Осталось <span id="popup_count" class="js-teaser-count">29</span> бесплатных бонусов',
-        t19: 'Пользователь <span id="user_mail"></span> получил $1000!',
-        t20: '<a href="http://runlikea.pro/?target=-6AAIgNwJ3IAAAAAAAAAAAAAT2wWlwAAAA" class="btn btn--link hidemob" id="t20">Официальный сайт</a>'
-    }*/
     },
     countries = {
         'Russia': 'ru',
