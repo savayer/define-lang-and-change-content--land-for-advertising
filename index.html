@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        var lang_locale = navigator.language.split('-')[0].toLowerCase(),
+            html = document.querySelector('html');
+        if (lang_locale == 'ru') lang_locale = 'en';
+        if (lang_locale == 'ar') html.setAttribute('dir', 'rtl');
+
+        window.tracking_link = '{link|purchanger.com}';
+    </script>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta charset="utf-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
+    <link rel="stylesheet" href="distr/css/jquery.jgrowl.min.css">
+    <link rel="stylesheet" href="distr/css/style.css">
+    <link href="distr/css/bootstrap.lazy.css" rel="stylesheet" type="text/css" />
+    <title>Congratulations!</title>
+    <link rel="stylesheet" href="distr/css/style.css">
+</head>
+
+<body>
+<!--     <audio autoplay="" preload="">
+<source src="distr/src/alert.mp3" type="audio/mpeg">
+</audio> -->
+    <div id="vm">
+        <audio id="click_audio" preload="">
+            <source src="distr/src/click.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="win_audio" preload="">
+            <source src="distr/src/win.mp3" type="audio/mpeg">
+        </audio>
+        <div class="overlay"></div>
+        <div class="top-bar">
+            <div style="float:left; max-width: 200px; padding-left: 10px">
+                <img src="distr/images/logo.png" width="120" />
+            </div>
+            <div class="header">
+                <h1 style="color: #0ebcff; margin-right: 115px;" class="texts" id="promo"></h1></div>
+        </div>
+        <div style="float: right; padding-right: 20px">
+            <div class="sprite lang "></div>
+        </div>
+        
+        <div class="container">
+            <section class="description current-step" id="step1">
+                <p><span class="texts" id="step1_t1"></span></p>
+                <a href="#" class="left_horizontal_orientation"><img id="iphone" src="distr/images/iphone.png" style="width: 80px;margin-bottom: 5px;"/></a>
+                <h3 class="texts" id="step1_t2" style="font-weight: bold; margin: 0"></h3>
+                <h2 style="color:red"><strong class="texts" id="step1_t3"></strong></h2>
+                <p class="texts" id="step1_t4"></p>
+                <div class="footer texts" id="step1_ok"></div>
+                <div class="clearfix"></div>
+                <p id="step1_pop1" class="texts"></p>
+                <p id="step1_pop2" class="texts"></p>
+            </section>
+            <section class="description" id="step2">
+                <div class="container wrapper_section">
+                    <h2 class="section__header texts" id="step2_t1"></h2>
+                    <form method="POST" action="//" name="questions" id="questions" class="questions">
+                        <ul class="questions__nav">
+                            <li class="curent"><span>&nbsp;</span></li>
+                            <li><span>&nbsp;</span></li>
+                            <li><span>&nbsp;</span></li>
+                        </ul>
+                        <div class="questions__slider">
+                            <div class="questions__slide questions__slide-1 curent-slide" slide="1">
+                                <fieldset class="questions__row">
+                                    <label class="questions__label texts" id="step2_name" for="name">1. Name: </label>
+                                    <input id="name" v-model="username" class="questions__input" name="name" type="text" required>
+                                </fieldset>
+                                <fieldset class="questions__btn main_button">
+                                    <button type="button" class="btn btn--primary btn--grey texts" id="step2_name_next"><span>Next &nbsp;></span></button>
+                                </fieldset>
+                            </div>
+                            <div class="questions__slide questions__slide-2" slide="2">
+                                <fieldset class="questions__row">
+                                    <div class="questions__title texts" id="step2_sex">2. Sex: </div>
+                                    <div class="questions__col">
+                                        <input class="hidden" id="m" type="radio" name="sex" checked>
+                                        <label for="m" class="questions__label sex texts" id="step2_sex_man">Man</label>
+                                    </div>
+                                    <div class="questions__col">
+                                        <input class="hidden" id="w" type="radio" name="sex">
+                                        <label for="w" class="questions__label sex texts" id="step2_sex_woman">Woman</label>
+                                    </div>
+                                </fieldset>
+                                <fieldset class="questions__btn main_button">
+                                    <button type="button" class="btn btn--primary btn--grey texts" id="step2_sex_next"><span>Next &nbsp;></span></button>
+                                </fieldset>
+                            </div>
+                            <div class="questions__slide questions__slide-3 " slide="3">
+                                <fieldset class="questions__row">
+                                    <div class="questions__title texts" id="step2_age">3. Age: </div>
+                                    <div class="questions__age-row">
+                                        <div class="questions__col">
+                                            <input class="hidden" id="age-18-34" type="radio" name="age" checked>
+                                            <label for="age-18-34" class="questions__label age">18-34</label>
+                                        </div>
+                                        <div class="questions__col">
+                                            <input class="hidden" id="age-35-44" type="radio" name="age">
+                                            <label for="age-35-44" class="questions__label age">35-44</label>
+                                        </div>
+                                        <div class="questions__col">
+                                            <input class="hidden" id="age-b45" type="radio" name="age">
+                                            <label for="age-b45" class="questions__label age"> > 45</label>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                <fieldset class="questions__btn main_button">
+                                    <button type="button" class="btn btn--primary btn--red texts" id="good_luck"><span>Good luck</span></button>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <section class="description" id="step3">
+                <div class="container wrapper_section">
+                    <div class="questions lottery">
+                        <div class="lottery__cell1">
+                            <img src="distr/images/iphone.png" alt="" class="iphone_left">
+                            <p class="texts" id="step3_t1">Сотрите 3 защитных слоя!
+                                <br> <b>и выиграйте айфон!</b> </p>
+                            <div class="description_present">
+                                <img src="distr/images/description_present.png" alt="">
+                            </div>
+                        </div>
+                        <div class="lottery__cell2">
+                            <div class="block_lottery">
+                                <div class="block_lottery__cell close_cell check_after" data-cell="1"></div>
+                                <div class="block_lottery__cell close_cell check_after" data-cell="2"></div>
+                                <div class="block_lottery__cell close_cell check_after" data-cell="3"></div>
+                                <div class="block_lottery__cell close_cell check_after" data-cell="4"></div>
+                                <div class="block_lottery__cell close_cell check_after" data-cell="5"></div>
+                                <div class="block_lottery__cell close_cell check_after" data-cell="6"></div>
+                                <div class="block_lottery__cell close_cell check_after" data-cell="7"></div>
+                                <div class="block_lottery__cell close_cell check_after" data-cell="8"></div>
+                                <div class="block_lottery__cell close_cell check_after" data-cell="9"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="description" id="step4">
+                <div class="container wrapper_section">
+                    <h1 class="texts" id="step4_congr">Поздравляем, <span id="name_out"></span>!</h1>
+                    <img src="distr/images/cart.png" class="add_iphone" alt="">
+                    <div class="texts" id="step4_t2">
+                        
+                    </div>
+                    <p><span class="main_button texts" id="choose_present" style="padding: 12px 50px; display: none">Выбрать приз</span></p>
+                </div>
+            </section>
+        </div>
+
+        <section class="section_present">
+            <div class="wrapper">
+                <div class="prize__list row">
+                    <product product-id="prod_1" product-name="varikosette" product-link="{link|purchanger.com}/5"></product>
+                    <product product-id="prod_2" product-name="miracle glow" product-link="{link|purchanger.com}/1"></product>
+                    <product product-id="prod_3" product-name="goji cream" product-link="{link|purchanger.com}/3"></product>
+                    <product product-id="prod_4" product-name="green coffee" product-link="{link|purchanger.com}/4"></product>
+                    <product product-id="prod_5" product-name="bust full" product-link="{link|purchanger.com}/6"></product>
+                    <product product-id="prod_6" product-name="xtra man" product-link="{link|purchanger.com}/7"></product>
+                    <product product-id="prod_7" product-name="rhino correct" product-link="{link|purchanger.com}/8"></product>
+                    <product product-id="prod_8" product-name="vigimin gel" product-link="{link|purchanger.com}/9"></product>
+                    <product product-id="prod_9" product-name="healthy liver" product-link="{link|purchanger.com}/10"></product>
+                    <product product-id="prod_10" product-name="perfect white cream" product-link="{link|purchanger.com}/11"></product>
+                    <product product-id="prod_11" product-name="saffron cream" product-link="{link|purchanger.com}/12"></product>
+                    <product product-id="prod_12" product-name="Hammer of thor" product-link="{link|purchanger.com}/13"></product>
+                </div>
+            </div>
+        </section>
+
+        <hr/>
+        <div class="comments">            
+            <strong class="texts" id="comments_text">Комментарии</strong>            
+
+            <comment v-for="comment in comments" :commentator-id="comment.commentator" :comment-id="comment.message" :minus-h="comment.minusH" :minus-m="comment.minusM" :minus-day="comment.minusDay" :show-comment="comment.show"></comment> <!-- v-show="comment.show" -->
+
+            <div class="add_message">
+                <div class="name-cont">
+                    <input type="text" class="leave_comment" v-model="userCommentator" name="name" placeholder="Enter your name">
+                </div>
+                <div class="clearfix"></div>
+                <div id="type-cont">
+                    <div id="type-box">
+                        <div>
+                            <input id="user-msg" v-model="userComment" name="msg" placeholder="Enter a message" type="text" />
+                        </div>
+                    </div>
+                    <div id="send"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <template id="product-template">
+        <a :href="productLink" class="prize__item" :id="makeId">
+            <div class="prize__wraper">
+                <div class="prize__pic">
+                    <img :src="makeImage" alt="">
+                    <div class="shild">-50%</div>
+                </div>
+                <div class="prize__descr">
+                    <h3 class="prize__title"> {{ productName }} </h3>
+                    <p class="texts" :id="productId"></p>
+                    <div class="btn-prize">Read</div>
+                </div>
+            </div>
+        </a>
+    </template>
+    
+    <template id="comment-template">
+        <table bRead="0" cellpadding="4" cellspacing="0" style="font-size: 13px;" width="100%" :class="needShow">
+            <tr>
+                <td align="right" valign="top" width="50"><img src="distr/images/male.jpg" /></td>
+                <td align="left" valign="top">
+                    <div class="name_commentator " :id="commentatorId"> {{ commentatorId }} </div>
+                    <div class="message_commentator " :id="commentId"> <span v-html="commentId"></span> </div>
+                    <div class="time_comment"> {{ minus_hm(minusH, minusM, minusDay) }} </div>
+                </td>
+            </tr>
+            <tr style="background: #fff">
+                <td colspan="2">
+                    <hr/>
+                </td>
+            </tr>
+        </table>
+    </template>
+
+
+
+    <div class="overlay_black"></div>
+    <div id="comebacker">
+        <h3 class="texts" id="pop1">More than $ 10 000 has been withdrawn in the country <span class="detect_country2"></span> for today!</h3>
+        <p class="text-center texts" id="pop2">Do not miss your chance to become rich!</p>
+        <p class="text-center texts" id="pop3">Hurry up! Only <span id="popup_left_bonus">22</span> free bonuses of $ 1000 are left!</p>
+        <button class="binatex_button texts" id="pop4">Learn how to get $ 1000</button>
+    </div>
+    <script src="distr/js/vue.min.js"></script>
+    <script src="distr/js/main.js"></script>
+    <script src="http://api-maps.yandex.ru/2.0-stable/?load=package.standard&amp;lang=en-US" type="text/javascript"></script>
+
+</body>
+
+</html>
